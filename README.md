@@ -30,7 +30,7 @@ Then:
  Then:
  `` python re_json.py ```
 
-* dbdump.sh - This script executes ```pg_dump -U <your username> -h <your hostname>``` which extract a PostgreSQL database into a script file or other archive file and stores it to a destination on your server(AWS ec2 instance in this case).Here --v1 and --v2 options are for specific <username> and <hostname>.
+* dbdump.sh - This script executes ```pg_dump -U <your username> -h <your hostname>``` which extract a PostgreSQL database into a script file or other archive file and stores it to a destination on your server(AWS ec2 instance in this case).
 
 Usage:
 Dowload this repository on your machine.
@@ -39,7 +39,7 @@ Then:
 
 Options:
 
-```dbdump <dbname> [--zip][--v1][--v2][--dir=</path>]```
+```dbdump <dbname> [--zip][--dir=</path>]```
 
 
 
