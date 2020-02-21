@@ -15,21 +15,38 @@ This project is part of a Python(Flask) application designed to provide AWS-cli 
 
 * dump.sh - This script reads a .json file (copy.json in this instance) and splits it's values to .json files in directories. With a little help of ```jq```
 
-Usage: Dowload this repository on your machine then run:
+Usage: 
+Dowload this repository on your machine then run:
 ``` source dump.sh```
 
 Then: 
 ``` jsondump copy.json ```
 
-* re_json.py - This script reads the plain text file 'new.txt' with re library(Regex) and stores it's output in 'output.js' file as a discionary. Then it converts the content in 'output.json' and writes it to 'final.json'.
+* re_json.py - This script reads the plain text file 'new.txt' with re library(Regex) and stores it's output in 'output.js' file as a discionary. Then it converts its to .json format and writes it to 'final.json'.
+!!!!NOTE:  The regex compile pattern have to be adjusted to your needs.
 
-* 
+ Usage:
+ Dowload this repository on your machine then run:
+ Then:
+ `` python re_json.py ```
+
+* dbdump.sh - This script executes ```pg_dump -U <your username> -h <your hostname>``` which extract a PostgreSQL database into a script file or other archive file and stores it to a destination on your server(AWS ec2 instance in this case).
+
+Usage:
+Dowload this repository on your machine.
+Then:
+```source dbdump.sh```
+
+Options:
+
+```dbdump <dbname> [--zip][--v1][--v2][--dir=</path>]```
 
 
 
 ## Built With
 
-* [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
+* [Python3.6.6](https://docs.python.org/release/3.6.6/)
+* [Bash](https://www.gnu.org/software/bash/)
 
 
 
